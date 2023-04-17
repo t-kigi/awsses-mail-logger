@@ -1,0 +1,17 @@
+CDKConfig:
+  # この設定ファイルに紐づく設定名
+  ProjectName: AWSSES Mail Logging System
+  RetainWhenDeleted: false
+  DynamoDB:
+    TablePrefix: example
+  SES:
+    ConfigurationSetName: ses-logging
+    LoggingStatuses:
+      # 通知したいステータスを追加
+      - SEND
+      - BOUNCE
+      - COMPLAINT
+      - REJECT
+      - RENDERING_FAILURE
+  SNS:
+    TopicName: MailNotificationTopic

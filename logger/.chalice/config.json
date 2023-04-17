@@ -1,0 +1,25 @@
+{
+  "version": "2.0",
+  "app_name": "awsses-logger",
+  "environment_variables": {
+    "APPNAME": "awsses-logger"
+  },
+  "stages": {
+    "prod": {
+      "api_gateway_stage": "prod",
+      "autogen_policy": false,
+      "lambda_timeout": 10,
+      "lambda_memory_size": 256,
+      "environment_variables": {
+        "STAGE": "prod",
+        "CONFIG_FILE": "chalicelib/env/prod.yaml"
+      }
+    },
+    "local": {
+      "environment_variables": {
+        "STAGE": "local",
+        "CONFIG_FILE": "chalicelib/env/local.yaml"
+      }
+    }
+  }
+}
