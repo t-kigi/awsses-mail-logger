@@ -1,0 +1,9 @@
+Config:
+  # Profile: mail-logger
+  DynamoDB:
+    TablePrefix: example
+    # Endpoint: 
+    Region: ap-northeast-1
+    Version: "2023-04-17"
+  TopicName: MailNotificationTopic
+  TTL: 7776000  # 最低保存期間 (秒)
